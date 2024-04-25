@@ -19,7 +19,7 @@ const App = () => {
     peer.current.on('call', async (call) => {
       const getUserMedia = navigator.mediaDevices.getUserMedia;
 
-      const stream = await getUserMedia({video: false, audio: true});
+      const stream = await getUserMedia({video: true, audio: false});
 
       if (!ownVideoRef.current) return;
       ownVideoRef.current.srcObject = stream;
