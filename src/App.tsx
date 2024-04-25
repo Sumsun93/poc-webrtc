@@ -5,8 +5,8 @@ import Peer from "peerjs";
 const App = () => {
   const [peerId, setPeerId] = useState('');
   const [remotePeerId, setRemotePeerId] = useState('');
-  const remoteVideoRef = useRef<HTMLVideoElement>();
-  const ownVideoRef = useRef<HTMLVideoElement>();
+  const remoteVideoRef = useRef<HTMLVideoElement>(null);
+  const ownVideoRef = useRef<HTMLVideoElement>(null);
   const peer = useRef<Peer>();
 
   useEffect(() => {
